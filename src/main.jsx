@@ -136,10 +136,10 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onHashChange = () => setPage(window.location.hash.replace('#/', '') || 'home');
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
+  const onPopState = () => setPage(window.location.pathname.replace('/', '') || 'home');
+  window.addEventListener('popstate', onPopState);
+  return () => window.removeEventListener('popstate', onPopState);
+}, []);
 
   const activePage = pages[page] ? page : 'home';
   const current = pages[activePage];
