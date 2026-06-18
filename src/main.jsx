@@ -135,6 +135,8 @@ function App() {
   const [page, setPage] = useState(() => window.location.pathname.replace('/', '') || 'home');
   const [menuOpen, setMenuOpen] = useState(false);
 
+  
+
   useEffect(() => {
   const onPopState = () => setPage(window.location.pathname.replace('/', '') || 'home');
   window.addEventListener('popstate', onPopState);
@@ -148,6 +150,11 @@ function App() {
     setMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [activePage]);
+
+  const goToPage = (id) => {
+  window.history.pushState({}, '', id === 'home' ? '/' : `/${id}`);
+  setPage(id);
+};
 
   return (
     <>
