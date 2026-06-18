@@ -199,7 +199,7 @@ function Hero({ page }) {
       <div>
         <h1>{page.title}</h1>
         <p className="lead">{page.lead}</p>
-        <a className="btn" href="#/clients">Start a Client Project</a>
+        <a className="btn" href="/clients" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/clients'); window.dispatchEvent(new PopStateEvent('popstate')); }}>   Start a Client Project </a>
         <p className="note">Bengal, India | Official connection: <a className="email" href={`mailto:${email}`}>{email}</a> | <a className="social-link" href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
       </div>
       <div><img src={page.image} alt="Annotiq AI visual" /></div>
