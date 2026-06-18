@@ -184,7 +184,7 @@ function Header({ activePage, menuOpen, setMenuOpen, goToPage }) {
         </button>
         <nav className="nav-panel" aria-label="Main navigation">
           {navItems.map(([id, label]) => (
-            <a key={id} className={activePage === id ? 'active' : ''} href={`#/${id}`}>{label}</a>
+            <a   key={id}   className={activePage === id ? 'active' : ''}   href={id === 'home' ? '/' : `/${id}`}   onClick={(e) => {     e.preventDefault();     goToPage(id);   }} >   {label} </a>
           ))}
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </nav>
