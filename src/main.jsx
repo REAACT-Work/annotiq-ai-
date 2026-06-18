@@ -132,7 +132,7 @@ const pages = {
 };
 
 function App() {
-  const [page, setPage] = useState(() => window.location.hash.replace('#/', '') || 'home');
+  const [page, setPage] = useState(() => window.location.pathname.replace('/', '') || 'home');
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
