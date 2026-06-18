@@ -174,7 +174,7 @@ function App() {
 function Header({ activePage, menuOpen, setMenuOpen, goToPage }) {
   return (
     <header>
-      <a className="logo-wrap" href="#/home" aria-label="Annotiq AI home">
+      <a className="logo-wrap" href="/" aria-label="Annotiq AI home" onClick={(e) => { e.preventDefault(); goToPage('home'); }}>
         <img src="/logo-nav.png" alt="Annotiq AI logo" />
         <h2>Annotiq AI</h2>
       </a>
