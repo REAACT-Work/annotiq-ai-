@@ -159,7 +159,7 @@ function App() {
   return (
     <>
       <div className="bg-lines" />
-      <Header activePage={activePage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Header activePage={activePage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} goToPage={goToPage} />
       <Hero page={current} />
       {current.sections.map((section, index) => <ContentSection key={index} section={section} />)}
       {activePage === 'home' && <LiveProject />}
