@@ -171,7 +171,7 @@ function App() {
   );
 }
 
-function Header({ activePage, menuOpen, setMenuOpen }) {
+function Header({ activePage, menuOpen, setMenuOpen, goToPage }) {
   return (
     <header>
       <a className="logo-wrap" href="#/home" aria-label="Annotiq AI home">
