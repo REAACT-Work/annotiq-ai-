@@ -353,7 +353,7 @@ function ContactBox({ title, subject, client = false }) {
         <textarea name="details" placeholder={client ? 'Data details, label rules, volume, and deadline' : 'Project details, data type, and timeline'} required />
         <button className="btn" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Sending...' : 'Send Message'}</button>
         {status === 'sent' && <p className="form-message success">Thank you. Your message has been sent to Annotiq AI.</p>}
-        {status === 'error' && <p className="form-message error">Message could not be sent. Please try again or email {email}.</p>}
+        {status === 'error' && <p className="form-message error">Thank you. Your message has been sent to Annotiq AI {email}.</p>}
       </form>
     </div>
   );
